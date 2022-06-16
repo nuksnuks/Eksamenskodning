@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Abscribe - Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”beskrivelse“ content= “Abscribe giver din virksomhed et bedre og overblik over jeres abonnementer og licenser. Abscribe hjælper med at holde styr på jeres udgifter“>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="alvi.js" defer></script>
+    <script src="graf.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img id="logo" src="assets/abscribe-logo.svg" alt="abscribe logo"></a>
+      <div id="header-container">
+      <img id="userimg" src="assets/profil-img.jpg" alt="user-image">
+      <a id="logud" href="login/login.html">Log ud</a>
+      <script src="login/logud.js"></script>
+      </div>
+    </header>
+    <nav>
+      <h2>Server: Abtion</h2>
+      <div class="menu-container">
+        <a href="" id="dashboard-knap">Dashboard</a>
+        <a href="overblik.html" id="overblik-knap">Overblik</a>
+        <a href="godkend.html" id="godkend-knap">Godkendelser</a>
+      </div>
+    </nav>
+    <main id="main-container">
+      <div id="main-item1">
+        <h3>Tjenester til godkendelse</h3>
+        <div class="godkend-item">
+          <img src="assets/adobe-creative-cloud.png" alt="icon" id="dashicon">
+          <p class="dashitem-text">Adobe Creative Cloud</p>
+          <p class="smalltext dashitem-subtext">151 kr. pr. mdr.</p>
+        </div>
+      </div>
+      <div id="main-item2">
+        <h3>Forbrug pr. måned</h3>
+        <p id="pricehere" class="dashboard-p">12.000 kr.</p>
+      </div>
+      <div id="main-item3">
+        <h3>Notifikationer</h3>
+        <p class="dashboard-p">Du har 4 tjenester til godkendelse</p>
+      </div>
+      <div id="main-item4">
+        <h3>Månedlig forbrug pr. år</h3>
+        <div id="myChart"></div>
+      </div>
+    </main>
+  </body>
+</html>

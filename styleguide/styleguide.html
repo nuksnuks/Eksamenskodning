@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleguide.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="Style.js"></script>
+    <title>Style Guide</title>
+  </head>
+  <body>
+    <header>
+      <h1>Style Guide</h1>
+    </header>
+
+    <!-- lynge -->
+    <div class="box">
+      <Div class="guideT" onclick="showhide(this)">
+        <p>Logo og iconer</p>
+        <p class="arrow">&#x25BD;</p>
+      </Div>
+      <div class="grid">
+        <div class="a icon-container">
+          <img class="smallimg" src="../assets/abscribe-logo.svg" alt="Abscribe logo">
+          <span id="search" class="material-symbols-outlined">search</span>
+          <span id="klips" class="material-symbols-outlined">attach_file</span>
+          <span class="material-symbols-outlined">edit</span>
+        </div>
+        <code class="box b">
+          <p><b>HTML Kode:</b></p>
+          <p>--Logo--</p>
+          <p>&lt;img id="logo" src="assets/abscribe-logo.svg" alt="abscribe logo"&gt;</p> <br>
+          <p>--Icon--</p>
+          <p>&lt;head&gt;</p>
+          <p>...</p>
+          <p>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/&gt;</p>
+          <p>...</p>
+          <p>&lt;/head&gt;</p> <br>
+          <p>&lt;span id="search" class="material-symbols-outlined"&gt; search &lt;/span&gt;</p> <br>
+          <p>&lt;span id="klips" class="material-symbols-outlined"&gt; attach_file &lt;/span&gt;</p> <br>
+          <p>&lt;span class="material-symbols-outlined"&gt; edit &lt;/span&gt;</p> <br>
+        </code>
+      </div>
+    </div>
+
+    <div class="box">
+      <Div class="guideT" onclick="showhide(this)">
+        <p>Text</p>
+        <p class="arrow">&#x25BD;</p>
+      </Div>
+      <div class="grid">
+        <div class="a">
+          <p>Skrifttype: Titillium Web</p>
+          <h1>Overskrifter: 40px</h1>
+          <h3>Underoverskrifter: 19px</h3>
+          <p>Brød text: 16px</p>
+          <p class="smalltext">Lille tekst: 13px</p>
+        </div>
+        <code class="box b">
+          <p><b>CSS Kode:</b></p>
+          <p>
+            font-family: 'Titillium Web', sans-serif;
+          </p> <br>
+          <p><b>HTML Kode:</b></p>
+          <p>
+            &lt;h2&gt;&lt;/h2&gt; <br>
+            &lt;h3&gt;&lt;/h3&gt; <br>
+            &lt;p&gt;&lt;/p&gt; <br> <br>
+            &lt;p class="smalltext"&gt;&lt;/p&gt;
+          </p>
+          <br>
+          <p><b>Eksemple:</b></p>
+          <p>
+            &lt;h2&gt;Title&lt;/h2&gt;
+          </p>
+        </code>
+      </div>
+    </div>
+
+    <!-- david -->
+    <div class="box">
+      <div class="guideT" onclick="showhide(this)">
+        <p>Farver</p>
+        <p class="arrow">&#x25BD;</p>
+      </div>
+      <div class="grid">
+        <div class="color-container a">
+          <div class="colors" id="darkpurple">
+            <p>Darkpurple <br>
+            #36244D</p>
+          </div>
+          <div class="colors" id="purple">
+            <p>Purple <br>
+            #4C3864</p>
+          </div>
+          <div class="colors" id="lightpurple">
+            <p>Lightpurple <br>
+            #DCBCFD</p>
+          </div>
+          <div class="colors" id="peach">
+            <p>Peach <br>
+            #F2D7CA</p>
+          </div>
+          <div class="colors" id="white">
+            <p>White <br>
+            #FFFFFF</p>
+          </div>
+          <div class="colors" id="green">
+            <p>Green <br>
+            #FCFAF0</p>
+          </div>
+          <div class="colors" id="offwhite">
+            <p>Offwhite <br>
+            #CBEBDB</p>
+          </div>
+          <div class="colors" id="red">
+            <p>Red <br>
+            #E65151</p>
+          </div>
+        </div>
+        <code class="box b">
+          <p><b>CSS Kode:</b></p>
+          <p>var(--deeppurple) <br>
+          var(--purple) <br>
+          var(--lightpurple) <br>
+          var(--peach) <br>
+          var(--white) <br>
+          var(--offwhite) <br>
+          var(--green) <br>
+          var(--red)</p>
+          <br>
+          <p><b>Eksemple:</b></p>
+          <p>color: var(--offwhite)</p>
+          </code>
+      </div>
+    </div>
+
+    <!-- lynge -->
+    <div class="box">
+      <div class="guideT" onclick="showhide(this)">
+        <p>Knapper og inputfelter</p>
+        <p class="arrow">&#x25BD;</p>
+      </div>
+      <div class="grid">
+        <div class="a buttons-container">
+          <div class="smallholder">
+            <p>Navigations knap:</p>
+            <a  class="knap">menu knap</a>
+          </div>
+          <div class="smallholder">
+            <p>Log ud knap:</p>
+            <a id="logud" href="">Log ud</a>
+          </div>
+          <div class="smallholder">
+            <p>Log ind knap:</p>
+            <a id="login-knap">Log In</a>
+          </div>
+          <div class="smallholder">
+            <p>Kontekst knap:</p>
+            <a class="prompt-knap">Ok</a>
+          </div>
+          <div class="smallholder">
+            <p>Fjern knap:</p>
+            <a class="fjern">Fjern</a>
+          </div>
+          <div class="smallholder">
+            <p>Søgefelt:</p>
+            <input id="filter" list="tags">
+          </div>
+        </div>
+        <code class="box b">
+          <p><b>HTML Kode:</b></p>
+          <p> &lt;a href="" class="knap"&gt;&lt;/a&gt; <br> <br>
+            &lt;a href="" id="logud"&gt;&lt;/a&gt; <br> <br>
+            &lt;a class="login-knap"&gt;&lt;/a&gt; <br> <br>
+            &lt;div class="prompt-knap"&gt;&lt;/div&gt; <br> <br>
+            &lt;button id="fjern"&gt;&lt;/button&gt; <br> <br>
+            <p>--Inputfelt--</p>
+            <p>&lt;input id="filter" list="tags"&gt;
+              &lt;datalist id="tags"&gt;
+              &lt;/datalist&gt;
+            </p>
+
+            <br>
+          </p>
+          <p><b>Eksemple:</b></p>
+          <p>&lt;a href="login/ login.html" class="logud"&gt; Log ud &lt;/a&gt;</p>
+        </code>
+      </div>
+    </div>
+
+  </body>
+</html>

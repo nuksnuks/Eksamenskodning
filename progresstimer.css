@@ -1,0 +1,25 @@
+body {
+background-image: linear-gradient(90deg, purple 0%, hotpink 100%);
+}
+#rate{
+  display:flex;
+  flex-direction: row;
+}
+.ratetext{
+  margin: 0;
+}
+#progress-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #FCF4F0;
+  height: 50px;
+  width: 250px;
+  border-radius: 5px;
+}
+#progress-bar {
+  background-image: linear-gradient(90deg,rgba(0,0,0,0) 75%, #F2D7CA 100%);
+  width: 100%;
+  border-radius: 5px;
+  text-align: right;
+  padding: 0px 5px 0px 0px;
+}

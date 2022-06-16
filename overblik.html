@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="overblik.js" defer></script>
+    <script src="ttjeneste.js" defer></script>
+    <script src="ftjeneste.js" defer></script>
+    <title>Abscribe Overblik</title>
+</head>
+<body>
+  <!--David -->
+  <header>
+    <a href="index.html"><img id="logo" src="assets/abscribe-logo.svg" alt="abscribe logo"></a>
+
+    <div id="header-container">
+    <img id="userimg" src="assets/profil-img.jpg" alt="user-image">
+    <a id="logud" href="login/login.html">Log ud</a>
+    <script src="login/logud.js"></script>
+    </div>
+  </header>
+  <nav>
+    <h2>Server: Abtion</h2>
+    <div class="menu-container">
+      <a href="index.html" id="obdk">Dashboard</a>
+      <a href="overblik.html" id="obok">Overblik</a>
+      <a href="godkend.html" id="obgk">Godkendelser</a>
+    </div>
+  </nav>
+  <!-- David -->
+
+    <!-- lynge -->
+    <div id="filterbox">
+        <button id="tilfoej">+</button>
+        <input id="filter" list="tags">
+        <span id="search" class="material-symbols-outlined">
+            search
+        </span>
+    </div>
+
+    <datalist id="tags">
+    </datalist>
+    <!-- amanda -->
+    <div id="ttprofil" class="ttprofil">
+        <!--tilfoej tjeneste profil indhold-->
+        <div class="ttprofil-content">
+          <!--billede kasse-->
+            <div class="imgb"></div>
+            <!--navn-->
+            <div class="navnb">
+                <h3>Navn</h3>
+                <input id="inname" type="text">
+            </div>
+                <!-- X til at lukk-->
+            <button class="luk" id="luk">X</button>
+            <!--boks til pris og tjeneste startet-->
+            <div class="tekstb">
+                <p class="pris">Pris <input id="inprice" type="number"> </p>
+                <p class="tstart">Startede</p>
+            </div>
+            <!--boks til projekt og tilføjet af-->
+            <div class="tekstb2">
+                <p class="projekt">Projekt</p>
+                <p class="taf">betalingsdato</p>
+                <input id="dato" type="date">
+            </div>
+            <!--Tags title-->
+            <div class="tekstb3">
+                <p>Tags</p> <input id="intag" type="text">
+            </div>
+            <!--tag box med + knap-->
+            <div class="ttag">+ </div>
+            <!--boks med note og konti title-->
+            <div class="tekstb4">
+                <div class="noter">
+                    <p>Noter</p>
+                    <div class="whiteb">
+                        <p>I..</p></div>
+                </div>
+                <div class="kontin">
+                    <p>Konti</p>
+                    <div class="whiteb">
+                        <button id="tkonto">+</button></div>
+                </div>
+                <span id="klips" class="material-symbols-outlined">attach_file</span>
+                <button id="ttjeneste" class="ttjeneste">Tilføj tjeneste</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="fjernbox">
+        <div id="fjernm" class="fjernm">
+            <div class="fjern-content">
+                <p>Er du sikker på at du vil fjerne tjenesten?</p>
+                <div class="janej">
+                    <button id="ja" >Ja</button>
+                    <button id="nej" >Nej</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="fjern2" class="fjern2">
+            <div class="fjern2-content">
+            <p>Tjenesten er nu fjernet</p>
+            <button id="ok2">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- lynge -->
+    <div id="allbox">
+        <div class="holderbox">
+            <div onclick="expand(this)" class="box Intern Kode Fast">
+                <div class="imgbox"> <img class="ii" src="assets/heroku.jpg" alt="heroku-icon"> </div>
+                <div class="textbox">
+                    <p class="name">Heroku</p>
+                    <p class="price smalltext">1768 kr.</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="ditbox">
+                    <p class="edit" id="progress-bar">Redigeret: d.17/05-22</p>
+                </div>
+            </div>
+            <div class="expandbox">
+                <div class="imgbox"> <img class="ii" src="assets/heroku.jpg" alt="heroku-icon"> </div>
+                <div class="namebox">
+                    <h3>Navn</h3>
+                </div>
+                <span class="material-symbols-outlined">
+                    edit
+                </span>
+                <div class="textbox">
+                    <p class="price">Pris</p>
+                    <p class="start">Startede</p>
+                </div>
+                <div class="ditbox">
+                  <div id="dato-felt">
+                    <p id="datop">Angiv betalingsdato</p>
+                    <button id="idag" class="datoknap">I dag</button>
+                    <input class="date-input" id="dato1" type="number" min="1" max="31" placeholder="dato">
+                    <input class="date-input" id="month" type="number" min="1" max="12" placeholder="måned">
+                    <input class="date-input" id="year" type="number" min="2022" max="9999" placeholder="år">
+                    <button id="knap" class="datoknap">ok</button>
+                    <script src="datecounter.js"></script>
+                  </div>
+                </div>
+                <div class="tagtitle">
+                    <p>Tags</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="exbottom">
+                    <div class="notes">
+                        <p>Noter</p>
+                        <div class="whitebox"></div>
+                    </div>
+                    <div class="konto">
+                        <p>Konti</p>
+                        <div class="whitebox"></div>
+                        <p class="arrow">&#x25BC;</p>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        attach_file
+                    </span>
+                    <p onclick="expand(this)" class="botar arrow">&#x25B2;</p>
+                    <button class="fjern">Fjern</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="holderbox">
+            <div  onclick="expand(this)" class="box Fast Intern Kommunikation">
+                <div class="imgbox"> <img class="ii" src="assets/slack.png" alt="heroku-icon"> </div>
+                <div class="textbox">
+                    <p class="name">Slack</p>
+                    <p class="price smalltext">700 kr.</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="ditbox">
+                    <p class="edit" id="progress-bar">Redigeret: d.17/05-22</p>
+                </div>
+            </div>
+            <div class="expandbox">
+                <div class="imgbox"> <img class="ii" src="assets/slack.png" alt="heroku-icon"> </div>
+                <div class="namebox">
+                    <h3>Navn</h3>
+                </div>
+                <span class="material-symbols-outlined">
+                    edit
+                </span>
+                <div class="textbox">
+                    <p class="price">Pris</p>
+                    <p class="start">Startede</p>
+                </div>
+                <div class="ditbox">
+                  <div id="dato-felt">
+                    <p id="datop">angiv betalingsdato</p>
+                    <button id="idag" class="datoknap">I dag</button>
+                    <input class="date-input" id="dato1" type="number" min="1" max="31" placeholder="dato">
+                    <input class="date-input" id="month" type="number" min="1" max="12" placeholder="måned">
+                    <input class="date-input" id="year" type="number" min="2022" max="9999" placeholder="år">
+                    <button id="knap" class="datoknap">ok</button>
+                    <script src="datecounter.js"></script>
+                  </div>
+                </div>
+                <div class="tagtitle">
+                    <p>Tags</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="exbottom">
+                    <div class="notes">
+                        <p>Noter</p>
+                        <div class="whitebox"></div>
+                    </div>
+                    <div class="konto">
+                        <p>Konti</p>
+                        <div class="whitebox"></div>
+                        <p class="arrow">&#x25BC;</p>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        attach_file
+                    </span>
+                    <p onclick="expand(this)" class="botar arrow">&#x25B2;</p>
+                    <button class="fjern">Fjern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hidden">
+        <div class="holderbox">
+            <div onclick="expand(this)" class="box">
+                <div class="imgbox"></div>
+                <div class="textbox">
+                    <p class="name">Navn</p>
+                    <p class="price smalltext">Pris</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="ditbox">
+                    <p class="edit">Redigeret</p>
+                    <p class="use smalltext">Projekt</p>
+                </div>
+            </div>
+            <div class="expandbox">
+                <div class="imgbox"></div>
+                <div class="namebox">
+                    <h3>Navn</h3>
+                </div>
+                <span class="material-symbols-outlined">
+                    edit
+                </span>
+                <div class="textbox">
+                    <p class="price">Pris</p>
+                    <p class="start">Startede</p>
+                </div>
+                <div class="ditbox">
+                    <p class="edit">Redigeret</p>
+                    <p id="timer"></p>
+                    <p class="use">Projekt</p>
+                </div>
+                <div class="tagtitle">
+                    <p>Tags</p>
+                </div>
+                <div class="tagbox">
+                </div>
+                <div class="exbottom">
+                    <div class="notes">
+                        <p>Noter</p>
+                        <div class="whitebox"></div>
+                    </div>
+                    <div class="konto">
+                        <p>Konti</p>
+                        <div class="whitebox"></div>
+                        <p class="arrow">&#x25BC;</p>
+                    </div>
+                    <span class="material-symbols-outlined">
+                        attach_file
+                    </span>
+                    <p onclick="expand(this)" class="botar arrow">&#x25B2;</p>
+                    <button class="fjern">Fjern</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
